@@ -1,58 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz</title>
     <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+</head>
+
+<body>
     <nav class="d-flex center">
-      <h1 id="instutin_Name">Will be name</h1>
+        <h1 id="instutin_Name">Will be name</h1>
     </nav>
     <main class="d-flex col center">
-      <div>Total number of questions :: <span class="qwe-no"></span></div>
-      <button id="start-btn" class="btn primary">Start</button>
-      <div class="qwe">
-        Questions
-        <div class="card">
-          <!-- <div class="header">
-            <div class="scoreBox">Score:0</div>
-            <div class="timeBox">Time Left:<span></span></div>
-          </div> -->
-          <div class="title mx-1 my-1" id="qwe">Will be qwe</div>
-          <div class="body" id="options">
-            <input type="radio" name="" value="" />
-          </div>
-          <div class="footer mx-1 my-1">
-            <button class="btn info" onclick="nextQwe()">Next</button>
+        <div>Total number of questions :: <span class="qwe-no"></span></div>
+        <button id="start-btn" onclick="countdown()" class="btn primary">Start</button>
+        <div class="qwe" id="quizCard">
+            Questions
+            <div class="card">
+                <div class="header">
+                    <!-- <div class="scoreBox">Score:0</div> -->
+                    <span>Time: <span id="countdown"></span></span>
+                </div>
+                <div class="title mx-1 my-1" id="qwe">Will be qwe</div>
+                <div class="body" id="options">
+                    <input type="radio" name="" value="" />
+                </div>
+                <div class="footer mx-1 my-1">
+                    <button class="btn info" onclick="nextQwe()">Next</button>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- <button class="btn info" onclick="Result()">Show Result</button> -->
+        <div class="box" id="resultScreen" hide>
             <button class="btn info" onclick="reset()">Reset</button>
-          </div>
+            <div class="title d-flex center">Quiz Result</div>
+            <div class="d-flex center">
+                <div class="d-flex col">
+                    <div>
+                        <label>Questions:</label>
+                        <span class="title" id="totalQuestion"></span>
+                    </div>
+                    <div>
+                        <label>Correct:</label>
+                        <span class="title" id="correctAnswers"></span>
+                    </div>
+                    <div>
+                        <label>Wrong:</label>
+                        <span class="title" id="wrongAnswers"></span>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      
-      <!-- <button class="btn info" onclick="Result()">Show Result</button> -->
-      <div class="box" id="resultScreen" hide>
-        <div class="title d-flex center">Quiz Result</div>
-        <div class="d-flex center">
-          <div class="d-flex col">
-            <div>
-              <label>Questions:</label>
-              <span class="title" id="totalQuestion"></span>
-            </div>
-            <div>
-              <label>Correct:</label>
-              <span class="title" id="correctAnswers"></span>
-            </div>
-            <div>
-              <label>Wrong:</label>
-              <span class="title" id="wrongAnswers"></span>
-            </div>
-          </div>
-        </div>
-      </div>
     </main>
-  </body>
+</body>
+
 </html>
 <script src="./question.js"></script>
 <script src="./app.js"></script>
